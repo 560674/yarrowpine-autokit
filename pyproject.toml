@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autokit-lite"
+version = "1.0.0"
+description = "Everyday file automation: CSV cleanup, Excel/CSV conversion, PDF merge (free edition)."
+license = "MIT"
+requires-python = ">=3.9"
+dependencies = ["openpyxl>=3.1", "pypdf>=4.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+autokit = "autokit.cli:main"
+
+[tool.setuptools]
+packages = ["autokit"]
